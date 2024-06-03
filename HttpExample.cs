@@ -33,15 +33,15 @@ namespace func_identity_aca
 
                 string? displayName = null;
 
-                if (token.Claims.First(c => c.Type == "upn") != null)
+                if (token.Claims.FirstOrDefault(c => c.Type == "upn") != null)
                 {
                     displayName = token.Claims.First(c => c.Type == "upn").Value;
                 }
-                else if (token.Claims.First(c => c.Type == "app_displayname") != null)
+                else if (token.Claims.FirstOrDefault(c => c.Type == "app_displayname") != null)
                 {
                     displayName = token.Claims.First(c => c.Type == "app_displayname").Value;
                 }
-                else if (token.Claims.First(c => c.Type == "sub") != null)
+                else if (token.Claims.FirstOrDefault(c => c.Type == "sub") != null)
                 {
                     displayName = token.Claims.First(c => c.Type == "sub").Value;
                 }
