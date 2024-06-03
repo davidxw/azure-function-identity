@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "func_identity_aca": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7131",
+      "launchBrowser": false
+    }
+  }
+}
